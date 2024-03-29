@@ -16,6 +16,7 @@
     "yup": "^0.31.0"
   },
   "scripts": {
+    "dev": "react-scripts dev",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

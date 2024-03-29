@@ -24,8 +24,9 @@ const Register = () => {
     })
     return (
         <>
-            <h1>Register</h1>
-            <p>Fill the fields to create a new user</p>
+        <div className='allComp'>
+            <h1>Бүртгүүлэх</h1>
+            <p>Доорх талбаруудыг бүрэн бөглөж үргэлжлүүлнэ үү</p>
             <Formik
                 initialValues={{}}
                 onSubmit={handleSubmit}
@@ -36,6 +37,7 @@ const Register = () => {
                         <Field
                             name="firstName"
                             className="Login-Field"
+                            placeholder="Овог"
                         />
                         <ErrorMessage
                             component="span"
@@ -47,6 +49,7 @@ const Register = () => {
                         <Field
                             name="lastName"
                             className="Login-Field"
+                            placeholder="Нэр"
                         />
                         <ErrorMessage
                             component="span"
@@ -58,6 +61,8 @@ const Register = () => {
                         <Field
                             name="email"
                             className="Login-Field"
+                            placeholder="Цахим хаяг"
+
                         />
                         <ErrorMessage
                             component="span"
@@ -69,6 +74,9 @@ const Register = () => {
                         <Field
                             name="password"
                             className="Login-Field"
+                            placeholder="Нууц үг"
+                            type='password'
+
                         />
                         <ErrorMessage
                             component="span"
@@ -76,9 +84,11 @@ const Register = () => {
                             className="Login-Error"
                         />
                     </div>
-                    <button className="Login-Btn" type="submit">Register</button>
+                    <button className="Login-Btn" type="submit">Бүртгүүлэх</button>
                 </Form>
             </Formik>
+            <p>Бүртгэлтэй хэрэглэгч бол , <a href="/login" className="Signup-Link">энд дарж</a> нэвтэрч орно уу</p>
+            </div>
         </>
     )
 }

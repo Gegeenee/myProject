@@ -26,9 +26,15 @@ const Login = () => {
         password: yup.string().min(8).required()
     })
     return (
-        <>
-            <h1>Login</h1>
-            <p>Fill the fields to continue</p>
+        <>  
+        <div className='allComp'>
+            <div className='LoginTitle'>
+
+                <h1>Нэвтрэх</h1>
+                <p>Доорх талбаруудыг бөглөж цааш үргэлжлүүлнэ үү</p>
+
+            </div>
+
             <Formik
                 initialValues={{}}
                 onSubmit={handleSubmit}
@@ -39,6 +45,7 @@ const Login = () => {
                         <Field
                             name="email"
                             className="Login-Field"
+                            placeholder="Цахим хаяг"
                         />
                         <ErrorMessage
                             component="span"
@@ -50,6 +57,8 @@ const Login = () => {
                         <Field
                             name="password"
                             className="Login-Field"
+                            placeholder="Нууц үг"
+                            type="password"
                         />
                         <ErrorMessage
                             component="span"
@@ -57,9 +66,11 @@ const Login = () => {
                             className="Login-Error"
                         />
                     </div>
-                    <button className="Login-Btn" type="submit">Login</button>
+                    <button className="Login-Btn" type="submit">Нэвтрэх</button>
                 </Form>
             </Formik>
+            <p>Шинэ хэрэглэгч бол , <a href="/register" className="Signup-Link">энд дарж</a> бүргүүлнэ үү</p>
+        </div>
         </>
     )
 }
